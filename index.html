@@ -1,0 +1,1063 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подбор авто на заказ в Санкт-Петербурге | АвтоФокус СПб</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .header-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .header-phone {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .hero {
+      background: #f5f6f8;
+      padding: 70px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.08;
+      margin: 0 0 22px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 30px;
+      max-width: 580px;
+    }
+
+    .hero-list {
+      padding: 0;
+      margin: 0 0 32px;
+      list-style: none;
+    }
+
+    .hero-list li {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    .hero-list li::before {
+      content: "✓";
+      color: #1769e0;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      border-radius: 8px;
+      background: #1769e0;
+      color: #fff;
+      padding: 16px 28px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0e55bb;
+    }
+
+    .hero-note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .hero-image {
+      height: 390px;
+      border-radius: 16px;
+      background:
+        linear-gradient(
+          rgba(0,0,0,.15),
+          rgba(0,0,0,.15)
+        ),
+        url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80")
+        center / cover;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin: 0 0 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      padding: 28px;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1769e0;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .step h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #666;
+      font-size: 15px;
+    }
+
+    .benefits {
+      background: #f7f8fa;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .benefit-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .benefit h3 {
+      margin: 0 0 10px;
+    }
+
+    .benefit p {
+      color: #666;
+      margin: 0;
+    }
+
+    .cars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .car-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .car-photo {
+      height: 190px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .car-content {
+      padding: 22px;
+    }
+
+    .car-content h3 {
+      margin: 0 0 8px;
+    }
+
+    .car-price {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .car-content p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .objections {
+      background: #f7f8fa;
+    }
+
+    .objection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .objection {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .objection strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .objection p {
+      margin: 0;
+      color: #666;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review {
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .review-text {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .review-author {
+      font-weight: 700;
+    }
+
+    .review-car {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .form-section {
+      background: #17202e;
+      color: white;
+    }
+
+    .form-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .form-wrapper h2 {
+      font-size: 38px;
+      margin: 0 0 12px;
+    }
+
+    .form-wrapper p {
+      color: #c5cad2;
+      margin-bottom: 32px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      text-align: left;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 15px;
+      border-radius: 7px;
+      border: 1px solid #d8d8d8;
+      font-size: 16px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    form .btn {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .form-small {
+      font-size: 12px;
+      color: #9da5b1;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 22px 0;
+    }
+
+    .faq-question {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .faq-answer {
+      color: #666;
+    }
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid #eee;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 800px) {
+
+      .nav {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero-image {
+        height: 280px;
+      }
+
+      .steps,
+      .benefit-grid,
+      .cars,
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .objection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .full,
+      form .btn {
+        grid-column: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container header-inner">
+
+      <div class="logo">
+        АвтоФокус СПб
+      </div>
+
+      <nav class="nav">
+        <a href="#how">Как работаем</a>
+        <a href="#cars">Автомобили</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+
+      <div class="header-phone">
+        +7 (812) 000-00-00
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <h1>
+          Подбор автомобиля на заказ в Санкт-Петербурге
+        </h1>
+
+        <div class="hero-subtitle">
+          Поможем найти автомобиль на вторичном рынке,
+          проверим его перед покупкой и сопроводим сделку.
+        </div>
+
+        <ul class="hero-list">
+          <li>Подбор автомобилей по вашим параметрам</li>
+          <li>Проверка технического состояния</li>
+          <li>Проверка юридической чистоты</li>
+          <li>Сопровождение сделки</li>
+        </ul>
+
+        <a href="#form" class="btn">
+          Получить консультацию
+        </a>
+
+        <div class="hero-note">
+          Ответим на вопросы и расскажем, как проходит подбор.
+        </div>
+
+      </div>
+
+      <div class="hero-image"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW -->
+
+  <section id="how">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Как проходит подбор автомобиля
+      </h2>
+
+      <p class="section-subtitle">
+        Берём на себя основные этапы поиска и проверки автомобиля,
+        чтобы вам не пришлось заниматься этим самостоятельно.
+      </p>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Обсуждаем задачу</h3>
+          <p>
+            Узнаём ваш бюджет, пожелания и требования к автомобилю.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Ищем варианты</h3>
+          <p>
+            Анализируем объявления и отбираем подходящие автомобили.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Проверяем</h3>
+          <p>
+            Проверяем историю, документы и техническое состояние.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Помогаем купить</h3>
+          <p>
+            Сопровождаем переговоры и сделку до передачи автомобиля.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BENEFITS -->
+
+  <section class="benefits">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Почему обращаются к нам
+      </h2>
+
+      <p class="section-subtitle">
+        Покупка автомобиля с пробегом — ответственная задача,
+        поэтому лучше доверить её специалистам.
+      </p>
+
+      <div class="benefit-grid">
+
+        <div class="benefit">
+          <div class="benefit-icon">🔎</div>
+          <h3>Экономим ваше время</h3>
+          <p>
+            Вам не нужно самостоятельно просматривать сотни объявлений
+            и ездить на осмотры.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🛠️</div>
+          <h3>Знаем, что проверять</h3>
+          <p>
+            Обращаем внимание на техническое состояние,
+            историю автомобиля и документы.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🤝</div>
+          <h3>Сопровождаем сделку</h3>
+          <p>
+            Помогаем пройти путь от первого звонка продавцу
+            до покупки автомобиля.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CARS -->
+
+  <section id="cars">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Какие автомобили подбираем
+      </h2>
+
+      <p class="section-subtitle">
+        Работаем с автомобилями разных марок и ценовых категорий.
+      </p>
+
+      <div class="cars">
+
+        <div class="car-card">
+
+          <div
+            class="car-photo"
+            style="background-image:url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80');">
+          </div>
+
+          <div class="car-content">
+            <h3>Toyota Camry</h3>
+            <div class="car-price">от 2,2 млн ₽</div>
+
+            <p>
+              Подбор автомобиля с пробегом
+              под заданный бюджет.
+            </p>
+
+            <a href="#form" class="btn">
+              Хочу такой автомобиль
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="car-card">
+
+          <div
+            class="car-photo"
+            style="background-image:url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=800&q=80');">
+          </div>
+
+          <div class="car-content">
+            <h3>BMW 3 Series</h3>
+            <div class="car-price">от 2,8 млн ₽</div>
+
+            <p>
+              Найдём подходящие варианты
+              и организуем их проверку.
+            </p>
+
+            <a href="#form" class="btn">
+              Хочу такой автомобиль
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="car-card">
+
+          <div
+            class="car-photo"
+            style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80');">
+          </div>
+
+          <div class="car-content">
+            <h3>Porsche Macan</h3>
+            <div class="car-price">от 4,5 млн ₽</div>
+
+            <p>
+              Подбор автомобилей в более высокой
+              ценовой категории.
+            </p>
+
+            <a href="#form" class="btn">
+              Хочу такой автомобиль
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OBJECTIONS -->
+
+  <section class="objections">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Частые вопросы и сомнения
+      </h2>
+
+      <p class="section-subtitle">
+        Отвечаем на вопросы, которые возникают у клиентов
+        перед обращением за подбором.
+      </p>
+
+      <div class="objection-grid">
+
+        <div class="objection">
+          <strong>
+            «Я и сам могу найти автомобиль на Авито»
+          </strong>
+
+          <p>
+            Конечно. Но поиск подходящего автомобиля требует времени,
+            а его проверка — специальных знаний и оборудования.
+          </p>
+        </div>
+
+
+        <div class="objection">
+          <strong>
+            «Зачем платить за подбор?»
+          </strong>
+
+          <p>
+            Вы платите за экономию времени, экспертизу
+            и снижение рисков при покупке автомобиля.
+          </p>
+        </div>
+
+
+        <div class="objection">
+          <strong>
+            «А вдруг вы тоже не найдёте хороший автомобиль?»
+          </strong>
+
+          <p>
+            Мы не рекомендуем покупать автомобиль,
+            если он не соответствует согласованным критериям.
+          </p>
+        </div>
+
+
+        <div class="objection">
+          <strong>
+            «Мне сначала нужно просто посоветоваться»
+          </strong>
+
+          <p>
+            Можно начать с консультации и обсудить ваш бюджет,
+            требования и возможные варианты.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REVIEWS -->
+
+  <section id="reviews">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Отзывы наших клиентов
+      </h2>
+
+      <p class="section-subtitle">
+        Несколько примеров опыта клиентов.
+      </p>
+
+      <div class="reviews">
+
+        <div class="review">
+
+          <div class="review-text">
+            «Самостоятельно искал машину почти два месяца.
+            После обращения нашли подходящий вариант значительно быстрее.
+            Спасибо за помощь с проверкой.»
+          </div>
+
+          <div class="review-author">
+            Алексей
+          </div>
+
+          <div class="review-car">
+            Toyota RAV4
+          </div>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="review-text">
+            «Понравилось, что специалисты объясняли,
+            почему тот или иной вариант лучше не покупать.
+            В итоге нашли хороший автомобиль.»
+          </div>
+
+          <div class="review-author">
+            Дмитрий
+          </div>
+
+          <div class="review-car">
+            BMW X3
+          </div>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="review-text">
+            «Для меня главное было сэкономить время.
+            Получил несколько вариантов и смог спокойно выбрать.»
+          </div>
+
+          <div class="review-author">
+            Сергей
+          </div>
+
+          <div class="review-car">
+            Kia Sorento
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FORM -->
+
+  <section class="form-section" id="form">
+
+    <div class="container">
+
+      <div class="form-wrapper">
+
+        <h2>
+          Хотите подобрать автомобиль?
+        </h2>
+
+        <p>
+          Оставьте заявку — свяжемся с вами,
+          уточним задачу и расскажем о вариантах работы.
+        </p>
+
+        <form>
+
+          <input
+            type="text"
+            placeholder="Ваше имя"
+            required
+          >
+
+          <input
+            type="tel"
+            placeholder="Телефон"
+            required
+          >
+
+          <select class="full">
+
+            <option>
+              Примерный бюджет
+            </option>
+
+            <option>
+              До 1,5 млн ₽
+            </option>
+
+            <option>
+              1,5–2,5 млн ₽
+            </option>
+
+            <option>
+              2,5–4 млн ₽
+            </option>
+
+            <option>
+              Более 4 млн ₽
+            </option>
+
+          </select>
+
+          <input
+            class="full"
+            type="text"
+            placeholder="Какой автомобиль хотите найти?"
+          >
+
+          <button
+            class="btn"
+            type="submit"
+          >
+            Получить консультацию
+          </button>
+
+        </form>
+
+        <div class="form-small">
+          Нажимая кнопку, вы соглашаетесь
+          на обработку персональных данных.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section id="faq">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Остались вопросы?
+      </h2>
+
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <div class="faq-question">
+            Сколько стоит подбор автомобиля?
+          </div>
+
+          <div class="faq-answer">
+            Стоимость зависит от выбранного формата работы
+            и конкретной задачи. Точную стоимость сообщим после консультации.
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <div class="faq-question">
+            Сколько времени занимает подбор?
+          </div>
+
+          <div class="faq-answer">
+            Срок зависит от требований к автомобилю,
+            бюджета и ситуации на рынке.
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <div class="faq-question">
+            Вы работаете только в Санкт-Петербурге?
+          </div>
+
+          <div class="faq-answer">
+            Основной регион работы — Санкт-Петербург
+            и Ленинградская область.
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <div class="faq-question">
+            Можно ли заказать только проверку конкретного автомобиля?
+          </div>
+
+          <div class="faq-answer">
+            Да, можно обсудить отдельную проверку автомобиля,
+            который вы нашли самостоятельно.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 АвтоФокус СПб
+      </div>
+
+      <div>
+        Подбор автомобилей в Санкт-Петербурге
+      </div>
+
+      <div>
+        +7 (812) 000-00-00
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+      alert(
+        "Спасибо! Это демо-форма. " +
+        "В реальном проекте здесь будет отправка заявки."
+      );
+
+    });
+  </script>
+
+</body>
+</html>
+```
